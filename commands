@@ -1,0 +1,40 @@
+
+CREATE TABLE Student (
+ name TEXT NOT NULL,
+ rollno INTEGER PRIMARY KEY,
+ sections TEXT NOT NULL
+    );
+    
+INSERT INTO Student(name,rollno,sections)
+VALUES
+('DHRUV',73,'A'),
+('harsh',93, 'b'),
+('gupta',72,'k'),
+('prince',69,'Z');
+
+SELECT * FROM Student;
+
+UPDATE Student
+SET name = 'keshav',rollno=110
+where sections = 'b';
+SELECT * FROM Student;
+
+
+DELETE FROM Student
+where rollno = 72;
+
+SELECT * FROM Student;
+
+INSERT INTO Student(name,rollno,sections)
+VALUES
+('krish',115,'A');
+
+SELECT * FROM Student;
+SELECT rollno FROM Student;
+
+SELECT * FROM Student
+ where sections = 'A' AND rollno >100;
+-- SELECT Distinct sections FROM Student;
+
+
+SELECT LENGTH (name),UPPER(name) FROM Student;
